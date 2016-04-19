@@ -7,8 +7,8 @@
   <session-factory>
     <property name="connection.url">jdbc:mysql://localhost/warehouse</property>
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="connection.username">root</property>
-    <property name="connection.password">gromit</property>
+    <property name="connection.username">user</property>
+    <property name="connection.password">password</property>
     <property name="connection.pool_size">1</property>
     <property name="current_session_context_class">thread</property>
     <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
