@@ -10,37 +10,37 @@ import model.Warehouse;
 import dao.WarehouseDAO;
  
 public class WarehouseDAOImpl implements WarehouseDAO {
+	private Session session;
+	
+	public WarehouseDAOImpl() {
+		session = HibernateUtil.getSessionFactory().openSession();
+	}
  
-    public void addWarehouse(Warehouse warehouse, Session session) throws SQLException, Exception {
-        session = HibernateUtil.getSessionFactory().openSession();
+    public void addWarehouse(Warehouse warehouse) throws SQLException, Exception {
         session.beginTransaction();
         session.save(warehouse);
         session.getTransaction().commit();
     }
  
-    public void updateWarehouse(Warehouse warehouse, Session session) throws SQLException, Exception {
-        session = HibernateUtil.getSessionFactory().openSession();
+    public void updateWarehouse(Warehouse warehouse) throws SQLException, Exception {
         session.beginTransaction();
         session.update(warehouse);
         session.getTransaction().commit();
     }
  
-    public Warehouse getWarehouseById(Long id, Session session) throws SQLException, Exception {
+    public Warehouse getWarehouseById(Long id) throws SQLException, Exception {
         Warehouse warehouse = null;
-        session = HibernateUtil.getSessionFactory().openSession();
         warehouse = (Warehouse) session.load(Warehouse.class, id);
         return warehouse;
     }
  
-    public Collection<Warehouse> getAllWarehouses(Session session) throws SQLException, Exception {
+    public Collection<Warehouse> getAllWarehouses() throws SQLException, Exception {
         List<Warehouse> warehouses = new ArrayList<Warehouse>();
-        session = HibernateUtil.getSessionFactory().openSession();
         warehouses = session.createCriteria(Warehouse.class).list();
         return warehouses;
     }
  
-    public void deleteWarehouse(Warehouse warehouse, Session session) throws SQLException, Exception {
-        session = HibernateUtil.getSessionFactory().openSession();
+    public void deleteWarehouse(Warehouse warehouse) throws SQLException, Exception {
         session.beginTransaction();
         session.delete(warehouse);
         session.getTransaction().commit();

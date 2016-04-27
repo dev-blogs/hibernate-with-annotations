@@ -17,8 +17,7 @@ public class App {
     public void printAllWarehouses() {
         Session session = null;
         try {
-            session = HibernateUtil.getSessionFactory().openSession();
-            Collection<Warehouse> warehouses = Factory.getInstance().getWarehouseDAO().getAllWarehouses(session);
+            Collection<Warehouse> warehouses = Factory.getInstance().getWarehouseDAO().getAllWarehouses();
             Iterator<Warehouse> warehouseIterator = warehouses.iterator();
             System.out.println("list of warehouses:");
             while (warehouseIterator.hasNext()) {

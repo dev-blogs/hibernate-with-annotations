@@ -8,9 +8,9 @@ import model.Item;
 import org.hibernate.Session;
  
 public interface ItemDAO {
-    public void addItem(Item item, Session session) throws SQLException, Exception;
-    public void updateItem(Item item, Session session) throws SQLException, Exception;
-    public Item getItemById(Long id, Session session) throws SQLException, Exception;
-    public Collection<Item> getAllItems(Session session) throws SQLException, Exception;
-    public void deleteItem(Item item, Session session) throws SQLException, Exception;
+    public void addItem(Item item) throws SQLException, Exception;
+    public void updateItem(Item item) throws SQLException, Exception;
+    public Item getItemById(Long id) throws SQLException, Exception;
+    public Collection<Item> getAllItems() throws SQLException, Exception;
+    public void deleteItem(Item item) throws SQLException, Exception;
 }

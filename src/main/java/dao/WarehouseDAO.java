@@ -8,9 +8,9 @@ import model.Warehouse;
 import org.hibernate.Session;
  
 public interface WarehouseDAO {
-    public void addWarehouse(Warehouse warehouse, Session session) throws SQLException, Exception;
-    public void updateWarehouse(Warehouse warehouse, Session session) throws SQLException, Exception;
-    public Warehouse getWarehouseById(Long id, Session session) throws SQLException, Exception;
-    public Collection<Warehouse> getAllWarehouses(Session session) throws SQLException, Exception;
-    public void deleteWarehouse(Warehouse warehouse, Session session) throws SQLException, Exception;
+    public void addWarehouse(Warehouse warehouse) throws SQLException, Exception;
+    public void updateWarehouse(Warehouse warehouse) throws SQLException, Exception;
+    public Warehouse getWarehouseById(Long id) throws SQLException, Exception;
+    public Collection<Warehouse> getAllWarehouses() throws SQLException, Exception;
+    public void deleteWarehouse(Warehouse warehouse) throws SQLException, Exception;
 }
