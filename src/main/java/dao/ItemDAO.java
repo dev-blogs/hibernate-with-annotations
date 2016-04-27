@@ -2,10 +2,7 @@ package dao;
  
 import java.sql.SQLException;
 import java.util.Collection;
- 
 import model.Item;
- 
-import org.hibernate.Session;
  
 public interface ItemDAO {
     public void addItem(Item item) throws SQLException, Exception;

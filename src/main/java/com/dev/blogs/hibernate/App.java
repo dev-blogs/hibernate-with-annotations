@@ -4,14 +4,10 @@ import java.sql.SQLException;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
- 
 import model.Item;
 import model.Provider;
 import model.Warehouse;
- 
 import org.hibernate.Session;
- 
-import util.HibernateUtil;
  
 public class App {
     public void printAllWarehouses() {

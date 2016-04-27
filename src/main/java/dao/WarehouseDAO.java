@@ -2,10 +2,7 @@ package dao;
  
 import java.sql.SQLException;
 import java.util.Collection;
- 
 import model.Warehouse;
- 
-import org.hibernate.Session;
  
 public interface WarehouseDAO {
     public void addWarehouse(Warehouse warehouse) throws SQLException, Exception;
