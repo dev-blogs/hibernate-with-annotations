@@ -1,16 +1,13 @@
-package DAO.impl;
+package daoImpl;
  
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
- 
 import org.hibernate.Session;
- 
 import util.HibernateUtil;
-import model.Item;
 import model.Provider;
-import DAO.ProviderDAO;
+import dao.ProviderDAO;
  
 public class ProviderDAOImpl implements ProviderDAO {
  

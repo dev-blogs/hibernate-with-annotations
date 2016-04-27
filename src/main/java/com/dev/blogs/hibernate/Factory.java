@@ -1,11 +1,11 @@
 package com.dev.blogs.hibernate;
  
-import DAO.ItemDAO;
-import DAO.ProviderDAO;
-import DAO.WarehouseDAO;
-import DAO.impl.ItemDAOImpl;
-import DAO.impl.ProviderDAOImpl;
-import DAO.impl.WarehouseDAOImpl;
+import dao.ItemDAO;
+import dao.ProviderDAO;
+import dao.WarehouseDAO;
+import daoImpl.ItemDAOImpl;
+import daoImpl.ProviderDAOImpl;
+import daoImpl.WarehouseDAOImpl;
  
 public class Factory {
     private static Factory instance = null;
